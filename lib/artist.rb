@@ -36,4 +36,4 @@ extend Concerns::Findable
     @songs << song unless @songs.include? song
   end
 
-  
+end 
