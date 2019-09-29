@@ -3,7 +3,7 @@
    @@all = []
    def initialize(name, artist= nil)
        @name = name
-       self.artist = artist
+       self.artist = artist if artist
 
    end
    def self.all
@@ -21,9 +21,9 @@
      song
    end
 
- def self.artist
+ def artist=(artist)
    artist.add_song(self)
-   .all.push(self)
+   Artist.all.push(self)
  end
 
 end
